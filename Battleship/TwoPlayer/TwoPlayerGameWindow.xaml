@@ -1,0 +1,46 @@
+﻿<Window x:Class="Battleship.TwoPlayerGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Battleship"
+        mc:Ignorable="d"
+        Title="Battleship" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" x:Name="Player1" Text="Player 1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="2" x:Name="Player2" Text="Player 2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></TextBlock>
+        <Canvas Background="RosyBrown" Height="300" Width="300" x:Name="Table1" Grid.Row="1" Grid.Column="1" Grid.RowSpan="1" Grid.ColumnSpan="1" MouseDown="Table1_MouseDown" MouseUp="Table1_MouseUp">
+        </Canvas>
+        <Canvas Background="RoyalBlue" Height="300" Width="300" x:Name="Table2" Grid.Row="1" Grid.Column="2" Grid.RowSpan="1" Grid.ColumnSpan="1" MouseDown="Table2_MouseDown" MouseUp="Table2_MouseUp">
+        </Canvas>
+        <TextBlock Grid.Row="2" Grid.Column="1" x:Name="Player1Instruction" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="2" x:Name="Player2Instruction" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBlock Margin="10,20" HorizontalAlignment="Center">Ships:</TextBlock>
+            <TextBlock x:Name="ship1first" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship2first" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship3first" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship4first" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship5first" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="3">
+            <TextBlock Margin="10,20" HorizontalAlignment="Center">Ships:</TextBlock>
+            <TextBlock x:Name="ship1second" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship2second" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship3second" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship4second" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock x:Name="ship5second" Margin="10,20" HorizontalAlignment="Center"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
