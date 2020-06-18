@@ -71,7 +71,6 @@ namespace Battleship
                     position = e.GetPosition(Table1);
                     if (table1.shoot((int)position.X / Render.GameSize, (int)position.Y / Render.GameSize))
                     {
-                        table1.shunkenShip();
                         render.renderShipNumberShunken(ship1first, ship2first, ship3first, ship4first, ship5first, table1);
                         render.hiddenRendering(table1, Table1);
                         move++;
@@ -137,7 +136,6 @@ namespace Battleship
                     position = e.GetPosition(Table2);
                     if (table2.shoot((int)position.X / Render.GameSize, (int)position.Y / Render.GameSize))
                     {
-                        table2.shunkenShip();
                         render.renderShipNumberShunken(ship1second, ship2second, ship3second, ship4second, ship5second, table2);
                         render.hiddenRendering(table2, Table2);
                         move++;

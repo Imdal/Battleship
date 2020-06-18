@@ -54,12 +54,10 @@ namespace Battleship
                 position = e.GetPosition(Table1);
                 if (table1.shoot((int)position.X / Render.GameSize, (int)position.Y / Render.GameSize))
                 {
-                    table1.shunkenShip();
                     render.renderShipNumberShunken(ship1enemy, ship2enemy, ship3enemy, ship4enemy, ship5enemy, table1);
                     render.hiddenRendering(table1, Table1);
                     move++;
                     table2.randomShoot();
-                    table2.shunkenShip();
                     render.renderShipNumberShunken(ship1, ship2, ship3, ship4, ship5, table2);
                     Trace.WriteLine("random shoot");
                     render.Rendering(table2, Table2);

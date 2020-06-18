@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace Battleship
 {
-    class Table
+    public class Table
     {
 
         public int[,] table = new int[10,10];
@@ -38,9 +38,9 @@ namespace Battleship
             }
         }
 
-        public void shunkenShip()
+        private void shunkenShip()
         {
-            bool isShunken = true;
+            bool isShunken;
             for (int i = 0; i < 5; i++)
             {
                 isShunken = true;
@@ -234,6 +234,7 @@ namespace Battleship
             else if (table[row, col] == 1)
             {
                 table[row, col] = 3;
+                shunkenShip();
                 return true;
             }
             else 

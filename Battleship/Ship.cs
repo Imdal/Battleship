@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Battleship
 {
-    struct Ship
+    public struct Ship
     {
         public bool exists;
         public bool shunken;
