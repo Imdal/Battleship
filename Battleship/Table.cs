@@ -118,7 +118,7 @@ namespace Battleship
                         {
                             for(int y=0;y<3;y++)
                             {
-                                if (row1+1 <= 9 && row1-1>=0 && i-1>=0 && i+1<=9 && table[row1 - 1 + x, i - 1 + y] == 1)
+                                if (row1 - 1 + x <= 9 && row1 - 1 + x >= 0 && i - 1 + y >= 0 && i - 1 + y <= 9 && table[row1 - 1 + x, i - 1 + y] == 1)
                                     return false;
                             }
                         }
@@ -141,7 +141,7 @@ namespace Battleship
                         {
                             for (int y = 0; y < 3; y++)
                             {
-                                if (i - 1 >= 0 && i + 1 <= 9 && col1 - 1 >= 0 && col1 + 1 <= 9 && table[i - 1 + x, col1 - 1 + y] == 1)
+                                if (i - 1 + x >= 0 && i - 1 + x <= 9 && col1 - 1 + y >= 0 && col1 - 1 + y <= 9 && table[i - 1 + x, col1 - 1 + y] == 1)
                                     return false;
                             }
                         }
